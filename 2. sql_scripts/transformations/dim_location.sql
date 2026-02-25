@@ -1,15 +1,7 @@
-WITH base AS (
-  SELECT DISTINCT
-    LSOA_CODE,
-    DATA_SOURCE
-  FROM water_data
-)
-
 SELECT
-  LSOA_CODE AS lsoa_code,
-  CASE
-    WHEN DATA_SOURCE = 'Wessex' THEN 'South West'
-    WHEN DATA_SOURCE = 'United Utilities' THEN 'North West'
-    WHEN DATA_SOURCE = 'Yorkshire' THEN 'Yorkshire and Humber'
-  END AS region_name
-FROM base;
+  string_field_0 AS lsoa_code,
+  string_field_1 AS lsoa_name,
+  string_field_2 AS region_code,
+  string_field_3 AS region_name
+FROM loation_data`
+ORDER BY region_name, lsoa_name;
