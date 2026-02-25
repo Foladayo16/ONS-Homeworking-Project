@@ -1,0 +1,8 @@
+-- Which water companies have the highest average domestic consumption across their service areas?
+
+SELECT
+    water_company,
+    AVG(avg_consumption) AS avg_consumption_company
+FROM fact_water_consumption
+GROUP BY water_company
+ORDER BY avg_consumption_company DESC;

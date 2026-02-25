@@ -1,0 +1,9 @@
+-- Is there a relationship between homeworking and domestic water consumption?
+
+
+SELECT
+    region_name,
+    avg_consumption_region,
+    avg_homeworking_rate,
+    CORR(avg_consumption_region, avg_homeworking_rate) OVER() AS correlation_value
+FROM dashboard_region_summary;

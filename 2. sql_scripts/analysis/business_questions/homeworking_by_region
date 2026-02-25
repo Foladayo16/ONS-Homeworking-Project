@@ -1,0 +1,8 @@
+-- What is the average homeworking rate for each region?
+
+
+SELECT
+    region_name,
+    avg_homeworking_rate
+FROM region_homeworking
+ORDER BY avg_homeworking_rate DESC;

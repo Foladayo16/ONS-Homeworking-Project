@@ -1,0 +1,9 @@
+--Which regions have the highest and lowest domestic water
+-- consumption
+
+SELECT
+    region_name,
+    avg_consumption_region,
+    RANK() OVER (ORDER BY avg_consumption_region DESC) AS consumption_rank
+FROM dashboard_region_summary
+ORDER BY consumption_rank;
