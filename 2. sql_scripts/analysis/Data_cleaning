@@ -1,0 +1,75 @@
+Effect of Home working on water consumption
+
+--   1) Load and standardise raw tables
+--   2) Aggregate to analysis level
+--   3) Join datasets
+--   4) Create final analytical tables
+
+-- STEP 1: Load raw tables
+-- Raw tables:
+--   - raw_consumption
+--   - raw_homeworking
+-- Standardise column names and data types
+-- Actions:
+--   - Trim whitespace
+--   - Convert text to UPPERCASE
+--   - Convert numeric fields to FLOAT/INT
+--   - Ensure YEAR is INT
+
+-- STEP 2: Calculate average consumption per LSOA
+CREATE OR REPLACE TABLE lsoa_consumption AS
+SELECT
+    lsoa_code,
+    water_company,
+    year,
+    number_of_meters,
+    total_consumption,
+    SAFE_DIVIDE(total_consumption, number_of_meters) AS avg_consumption
+FROM cleaned_consumption;
+
+-- Aggregate homeworking to annual regional level
+
+CREATE OR REPLACE TABLE region_homeworking AS
+SELECT
+    region_name,
+    year,
+    AVG(homeworking_rate) AS avg_homeworking_rate
+FROM cleaned_homeworking
+GROUP BY region_name, year;
+
+-- STEP 3: Join LSOA consumption to region lookup
+
+CREATE OR REPLACE TABLE region_consumption AS
+SELECT
+    r.region_name,
+    c.water_company,
+    c.year,
+    c.avg_consumption
+FROM lsoa_consumption c
+LEFT JOIN lsoa_to_region r
+    ON c.lsoa_code = r.lsoa_code;
+
+    -- STEP 4: Final tables used in Looker Studio dashboard
+
+CREATE OR REPLACE TABLE dashboard_region_summary AS
+SELECT
+    r.region_name,
+    r.avg_consumption_region,
+    h.avg_homeworking_rate
+FROM region_summary r
+LEFT JOIN region_homeworking h
+    ON r.region_name = h.region_name;
+
+CREATE OR REPLACE TABLE dashboard_company_summary AS
+SELECT
+    water_company,
+    AVG(avg_consumption) AS avg_consumption_company
+FROM lsoa_consumption
+GROUP BY water_company;
+
+-- Quality checks
+-- Check for nulls, duplicates, and extreme values
+
+SELECT COUNT(*) FROM dashboard_region_summary;
+SELECT MIN(avg_consumption), MAX(avg_consumption) FROM lsoa_consumption;
+SELECT region_name, COUNT(*) FROM region_consumption GROUP BY region_name;
