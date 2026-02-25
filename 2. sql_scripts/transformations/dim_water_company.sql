@@ -1,15 +1,9 @@
 SELECT
-  1 AS company_id,
-  'Wessex Water' AS company_name,
-  'South West' AS region_served
-UNION ALL
-SELECT
-  2 AS company_id,
-  'United Utilities' AS company_name,
-  'North West' AS region_served
-UNION ALL
-SELECT
-  3 AS company_id,
-  'Yorkshire Water' AS company_name,
-  'Yorkshire and Humber' AS region_served;
+  ROW_NUMBER() OVER (ORDER BY company_name) AS company_id,
+  company_name
+FROM (
+  SELECT DISTINCT DATA_SOURCE AS company_name
+  FROM water_data`
+)
+ORDER BY company_name;
   
