@@ -94,5 +94,4 @@ Limitations
 📬 Contact
 If you’d like to discuss the project or explore the dashboard further, feel free to reach out.
 ## Dashboard preview
-![dashboard page 5](Pictures/page 5.PNG)
-![dashboard page 5](C:/Users/awofo/OneDrive/Pictures/page_5.PNG)
+![Dashboard page_5](3.%20dashboard/page_5.PNG)
