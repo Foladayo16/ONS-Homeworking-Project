@@ -1,4 +1,4 @@
-# ONS-Homeworking-Project
+# Assessing the Impact of Homeworking on Domestic Water Consumption Across seven Regions in England and Three Water Companies”
 The project seeks to identify whether increased levels of homeworking are associated with higher household water demand, and how these patterns vary across regions and water company service areas.  
 The analysis investigates behavioural and structural drivers of water use and evaluate the strength of the relationship between working from home and household consumption.
 The project includes data modelling, SQL transformations, exploratory analysis, and a multi‑page interactive dashboard built in Looker Studio.
@@ -95,3 +95,4 @@ Limitations
 If you’d like to discuss the project or explore the dashboard further, feel free to reach out.
 ## Dashboard preview
 ![dashboard page 5](Pictures/page 5.PNG)
+
