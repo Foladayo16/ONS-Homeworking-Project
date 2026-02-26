@@ -93,3 +93,5 @@ Limitations
 
 📬 Contact
 If you’d like to discuss the project or explore the dashboard further, feel free to reach out.
+## Dashboard preview
+![dashboard page 5](Pictures/page 5.PNG)
