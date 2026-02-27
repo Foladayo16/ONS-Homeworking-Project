@@ -92,6 +92,13 @@ Limitations
 - Rebuild the dashboard using the /dashboard/ folder as reference
 
 📬 Contact
-If you’d like to discuss the project or explore the dashboard further, feel free to reach out.
+If you’d like to discuss the project or explore the dashboard further, feel free to reach out. www.linkedin.com/in/abibat1
+
 ## Dashboard preview
-![Dashboard page_5](3.%20dashboard/page_5.PNG)
+![Dashboard Executive_summary](3.%20dashboard/Executive_summary.PNG)
+![Dashboard overview](3.%20dashboard/overview.PNG)
+![Dashboard homeworking](3.%20dashboard/homeworking.PNG)
+![Dashboard region_2023](3.%20dashboard/region_2023.PNG)
+![Dashboard dwc_2023](3.%20dashboard/dwc_2023.PNG)
+![Dashboard hw_and_dwc](3.%20dashboard/hw_and_dwc.PNG)
+![Dashboard summary_and_recommendation](3.%20dashboard/summary_and_recommendation.PNG)
