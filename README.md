@@ -8,7 +8,17 @@ The goal is to provide evidence‑based insights for water utilities, regulators
 
 🎯 Research Questions How did household water consumption change before, during, and after the shift to remote work? Which areas experienced the largest changes? How did demographic and socioeconomic factors influence consumption patterns? 
 
-🗂️ Data Sources Water Consumption & Supply Wessex Water domestic consumption datasets (2022-2024) United utilities domestic consumption datasets (2023) Yorkshire water domestic consumption (2022-2024) ONS Labour Force Survey (home‑working rates) 2017-2025
+🗂️ Data Sources 
+Water Consumption & Supply 
+Wessex Water domestic consumption datasets (2022-2024) https://www.streamwaterdata.co.uk/datasets/1f611c70ea584d77a2be7b52c60cf386_0/explore
+United utilities domestic consumption datasets (2023) https://www.streamwaterdata.co.uk/datasets/d9e37aa9e7564f69b8b6a59b3171ef36_0/explore
+Yorkshire water domestic consumption (2022-2024) https://www.streamwaterdata.co.uk/datasets/42f7b1cfe3b44451b6eedfa0051ef7af_0/explore
+https://www.streamwaterdata.co.uk/datasets/6c94cbe4350e4e7baf716cbe649637b7_0/explore
+https://www.streamwaterdata.co.uk/datasets/6c94cbe4350e4e7baf716cbe649637b7_0/explore
+ONS Labour Force Survey  (home‑working rates) 2017-2025 https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/adhocs/3000homeworkingbyregionandmonthukapril2017tomarch2025
+Geospatial lookup tables from ONS, specifically the LSOA (2021) to Region (2022) https://geoportal.statistics.gov.uk/datasets/0352e811ec2c4fc5917f39aea2d1b8a3_0/explore
+
+
 
 🧱 Methodology
 1.	Data Acquisition
