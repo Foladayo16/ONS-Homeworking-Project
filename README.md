@@ -1,4 +1,4 @@
-# Assessing the Impact of Remote Work on Household Water Use Across Seven Regions in Enland Supplied by 3 Water Companies.
+# Assessing the Impact of Remote Work on Household Water Use Across Seven Regions in England Supplied by 3 Water Companies.
 The project seeks to identify whether increased levels of homeworking are associated with higher household water demand, and how these patterns vary across regions and water company service areas.  
 The analysis investigates behavioural and structural drivers of water use and evaluate the strength of the relationship between working from home and household consumption.
 The project includes data modelling, SQL transformations, exploratory analysis, and a multi‑page interactive dashboard built in Looker Studio.
